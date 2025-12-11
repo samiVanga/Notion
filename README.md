@@ -7,14 +7,18 @@ Each widget is lightweight, responsive, and works inside any Notion page using a
 
 ## 📂 Widgets Included
 (Will update once widgets are commited)
-### 1.
+### 1. **Recurring Task List**
+A to do list that enforces habits each day. once a task is added, it persists and each day the task complete is refreshed
 
 **Features**
+1. Allows new tasks to be added
+2. Allows tasks to be removed
+3. Allows the user to check the task
+4. Each day the checks are refreshed
 
 
-**Embed URL:**  
-(Will update once GitHub Pages is deployed)
-
+**Embed URL:**<br>
+<sub>https://samivanga.github.io/Notion/RecurringToDo/</sub>
 ---
 
 ## 📦 How to Use a Widget in Notion

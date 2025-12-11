@@ -1,46 +1,65 @@
-body, html {
+html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  font-family: "Patrick Hand", sans-serif;
   background: transparent;
   overflow: hidden;
-}
-.container {
-  width: 100%;              /* allow full width inside Notion */
-  max-width: 320px;        
-  margin: 0 auto;           /* center */
-  background: #f3d6d6;
-  padding: 20px;
-  border-radius: 20px;
-  border: 3px solid #000000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  height: auto;
+  font-family: "Patrick Hand", sans-serif;
 }
 
+.container {
+  width: 240px;                      
+  background: #f3d6d6;
+  padding: 16px;                     
+  border-radius: 18px;
+  border: 3px solid #000000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin: 0 auto;                    
+}
+
+/* Title */
 h2 {
   text-align: center;
-  margin-top: 0; 
-  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;                   
   color: #000;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-
+/* Task list spacing */
 li {
   list-style: none;
+  margin: 8px 0;                  
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
-  font-size: 18px;
+}
+
+.task-text {
+  font-size: 18px;                   
+  border: none;
+  background: transparent;
+  width: 150px;                     
+  color: black;
+  font-family: "Patrick Hand";
+}
+
+.task-text:focus {
+  outline: none;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 18px;                   
+  cursor: pointer;
 }
 
 .heart {
-  width: 24px;
-  height: 24px;
+  width: 20px;                      
+  height: 20px;
   display: inline-block;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -48,73 +67,52 @@ li {
   background-size: contain;
 }
 
-/* Outline only */
+/* Outline heart */
 .heart.empty {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-6.3-4.4-9.4-8.5C-1.4 6.6 3.2 1.5 7.5 3.2 9.4 4 12 7 12 7s2.6-3 4.5-3.8C20.8 1.5 25.4 6.6 21.3 12.5 18.3 16.6 12 21 12 21z' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-6.3-4.4-9.4-8.5C-1.4 6.6 3.2 1.5 7.5 3.2 9.4 4 12 7 12 7s2.6-3 4.5-3.8C20.8 1.5 25.4 6.6 21.3 12.5 18.3 16.6 12 21 12 21z' fill='none' stroke='black' stroke-width='2.2'/%3E%3C/svg%3E");
 }
 
-/* Filled pastel green with black outline */
+/* Filled pastel matcha green heart */
 .heart.filled {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-6.3-4.4-9.4-8.5C-1.4 6.6 3.2 1.5 7.5 3.2 9.4 4 12 7 12 7s2.6-3 4.5-3.8C20.8 1.5 25.4 6.6 21.3 12.5 18.3 16.6 12 21 12 21z' fill='%23B7D7B4' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-6.3-4.4-9.4-8.5C-1.4 6.6 3.2 1.5 7.5 3.2 9.4 4 12 7 12 7s2.6-3 4.5-3.8C20.8 1.5 25.4 6.6 21.3 12.5 18.3 16.6 12 21 12 21z' fill='%23B7D7B4' stroke='black' stroke-width='2.2'/%3E%3C/svg%3E");
 }
 
-
-
-
-.task-text {
-  border: none;
-  background: transparent;
-  font-family: "Patrick Hand";
-  font-size: 18px;
-  width: 170px;
-}
-
-.task-text:focus {
-  outline: none;
-}
-
-/* Delete X button */
-.delete-btn {
-  background: none;
-  border: none;
-  color: #000;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* Add task area */
+/* Add-task row */
 .input-row {
   display: flex;
-  gap: 8px;
-  margin-top: 15px;
+  gap: 6px;                         
+  margin-top: 12px;
 }
 
+/* Task input */
 #new-task {
   flex: 1;
-  padding: 8px 10px;
+  padding: 6px 8px;                  
   border-radius: 10px;
-  border: 2px solid #000000;
+  border: 2px solid #000;
   background: #B7D7B4;
-  color:#000;
-  font-size: 16px;
+  font-size: 14px;                   
+  color: black;
   font-family: "Patrick Hand";
 }
+
 #new-task::placeholder {
   color: black;
-  opacity: 0.4; 
+  opacity: 0.4;
 }
 
+/* + Button */
 #add-btn {
-  width: 40px;
+  width: 32px;                       
+  height: 32px;                     
   border-radius: 10px;
   border: 2px solid #000;
   background: #B7D7B4;
   cursor: pointer;
-  font-size: 24px;
-
+  font-size: 20px;                   /* ↓ smaller */
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  padding: 0;
   font-family: "Patrick Hand";
 }

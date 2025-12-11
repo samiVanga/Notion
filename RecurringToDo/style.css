@@ -1,0 +1,117 @@
+body {
+  font-family: "Patrick Hand", sans-serif;
+  background: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 280px;
+  background: #f3d6d6; 
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid #000000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0; 
+  font-size: 24px;
+  color: #000;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.heart {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Outline only */
+.heart.empty {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-6.3-4.4-9.4-8.5C-1.4 6.6 3.2 1.5 7.5 3.2 9.4 4 12 7 12 7s2.6-3 4.5-3.8C20.8 1.5 25.4 6.6 21.3 12.5 18.3 16.6 12 21 12 21z' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Filled pastel green with black outline */
+.heart.filled {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-6.3-4.4-9.4-8.5C-1.4 6.6 3.2 1.5 7.5 3.2 9.4 4 12 7 12 7s2.6-3 4.5-3.8C20.8 1.5 25.4 6.6 21.3 12.5 18.3 16.6 12 21 12 21z' fill='%23B7D7B4' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+
+
+
+.task-text {
+  border: none;
+  background: transparent;
+  font-family: "Patrick Hand";
+  font-size: 18px;
+  width: 170px;
+}
+
+.task-text:focus {
+  outline: none;
+}
+
+/* Delete X button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Add task area */
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+#new-task {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #B7D7B4;
+  color:#000;
+  font-size: 16px;
+  font-family: "Patrick Hand";
+}
+#new-task::placeholder {
+  color: black;
+  opacity: 0.4; 
+}
+
+#add-btn {
+  width: 40px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  background: #B7D7B4;
+  cursor: pointer;
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: "Patrick Hand";
+}
